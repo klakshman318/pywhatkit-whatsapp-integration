@@ -1,5 +1,8 @@
 name: Send WhatsApp Message via pywhatkit to any mobile number
 
+permissions:
+  contents: read  # Minimal access for reading code in repo
+  
 on:
   workflow_dispatch:  # manual trigger from GitHub Actions UI
 
