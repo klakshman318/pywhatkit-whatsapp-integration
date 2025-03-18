@@ -1,0 +1,25 @@
+name: Send WhatsApp Message via pywhatkit to any mobile number
+
+on:
+  workflow_dispatch:  # manual trigger
+
+jobs:
+  send-message:
+    runs-on: self-hosted  # self-hosted runner required for GUI
+
+    steps:
+    - name: Checkout Repo
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Install Dependencies
+      run: |
+        pip install -r requirements.txt
+
+    - name: Run WhatsApp Message Script
+      run: |
+        python send_message.py
