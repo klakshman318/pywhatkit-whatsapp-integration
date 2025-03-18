@@ -7,6 +7,9 @@ jobs:
   send-message:
     runs-on: self-hosted  # self-hosted runner required for GUI
 
+    env:
+      PHONE_NUMBER: ${{ secrets.MY_PHONE_NUMBER }}
+      
     steps:
     - name: Checkout Repo
       uses: actions/checkout@v2
