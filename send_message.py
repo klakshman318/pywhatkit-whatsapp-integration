@@ -11,4 +11,4 @@ pywhatkit.sendwhatmsg_instantly(
     tab_close=True  # close tab after sending
 )
 
-print(f"WhatsApp message sent successfully to {phone_number}!")
+print("WhatsApp message sent successfully!")
